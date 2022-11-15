@@ -27,13 +27,13 @@ function Cart(props) {
       </div>
       <div>
         <div className={style.cardBody}>
-          <div>
+          <div className="">
             {cartItems.map((item) => {
               return (
                 <>
-                  <div>
-                    <div>
-                      <div className={style.cartItem}>
+                  <div className="animate__animated animate__bounceIn">
+                    <div className={style.cartItems}>
+                      <div key={item.id} className={style.cartItem}>
                         <div className={style.cartItem_left}>
                           <div
                             className={style.cartItem_image}
