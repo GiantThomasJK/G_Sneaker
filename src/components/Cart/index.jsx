@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./style.module.css";
 import nikePng from "../../assets/nike.png";
 import trashPng from "../../assets/trash.png";
@@ -13,10 +13,18 @@ function Cart(props) {
         <img className={style.cardTop_logo} src={nikePng} alt="" />
       </div>
       <div className={style.cardTitle}>
-        Your Cart
+        Your cart
         <div className={style.cardTitle_amount}>${itemsPrice.toFixed(2)}</div>
       </div>
-      <div>{cartItems.length === 0 && <div>Your cart is emty.</div>}</div>
+      <div>
+        {cartItems.length === 0 && (
+          <div className={style.cartEmpty}>
+            <div className={style.cartEmpty_text}>
+              <p>Your cart is emty.</p>
+            </div>
+          </div>
+        )}
+      </div>
       <div>
         <div className={style.cardBody}>
           <div>
@@ -29,7 +37,7 @@ function Cart(props) {
                         <div className={style.cartItem_left}>
                           <div
                             className={style.cartItem_image}
-                            style={{ backgroundColor: "rgb(225,231,237)" }}
+                            style={{ backgroundColor: `${item.color}` }}
                           >
                             <img src={item.image} alt="" />
                           </div>

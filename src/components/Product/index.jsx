@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.css";
 import nikePng from "../../assets/nike.png";
 import check from "../../assets/check.png";
-import 'animate.css';
+import "animate.css";
 
 function Product(props) {
   const { product, onAdd, cartItems } = props;
@@ -32,9 +32,6 @@ function Product(props) {
                     <div className={style.shopItem_price}>${item.price}</div>
                     {cartItems.find((x) => x.id === item.id) ? (
                       <div className={style.shopItem_button}>
-                        {/* <div className={style.shopItem_button_cover}>
-                          <div className={style.shopItem_button_check}></div>
-                        </div> */}
                         <img src={check} alt="" />
                       </div>
                     ) : (

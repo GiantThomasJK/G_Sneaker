@@ -55,6 +55,14 @@
     width: 0px;
 }
 
+.cartEmpty {
+    position: absolute;
+}
+
+.cartEmpty_text {
+    font-size: 14px;
+}
+
 .cartItem{
     display: flex;
     padding: 20px 0;
