@@ -50,11 +50,15 @@
     position: relative;
     overflow-y: scroll;
     scrollbar-width: none;
+    
+}::-webkit-scrollbar {
+    width: 0px;
 }
 
 .cartItem{
     display: flex;
     padding: 20px 0;
+    transition: all ease 1s;
 }
 .cartItem_left {
     flex: 0;
@@ -141,3 +145,4 @@
     width: 20px;
     text-align: center;
 }
+

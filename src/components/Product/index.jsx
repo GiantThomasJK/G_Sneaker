@@ -1,8 +1,11 @@
 import React from "react";
 import style from "./style.module.css";
 import nikePng from "../../assets/nike.png";
+import check from "../../assets/check.png";
+import 'animate.css';
+
 function Product(props) {
-  const { product,onAdd } = props;
+  const { product, onAdd, cartItems } = props;
   return (
     <div className={style.card}>
       <div className={style.cardTop}>
@@ -27,7 +30,21 @@ function Product(props) {
                   </div>
                   <div className={style.shopItem_bottom}>
                     <div className={style.shopItem_price}>${item.price}</div>
-                    <div onClick={() => onAdd(item)} className={style.shopItem_button}>ADD TO CART</div>
+                    {cartItems.find((x) => x.id === item.id) ? (
+                      <div className={style.shopItem_button}>
+                        {/* <div className={style.shopItem_button_cover}>
+                          <div className={style.shopItem_button_check}></div>
+                        </div> */}
+                        <img src={check} alt="" />
+                      </div>
+                    ) : (
+                      <div
+                        onClick={() => onAdd(item)}
+                        className={style.shopItem_button}
+                      >
+                        ADD TO CART
+                      </div>
+                    )}
                   </div>
                 </div>
               </>

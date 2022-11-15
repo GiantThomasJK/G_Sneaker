@@ -14,12 +14,14 @@ function Home() {
     if (exist) {
       setCartItems(
         cartItems.map((item) =>
-          item.id === product.id ? { ...exist, qty: exist.qty + 1 } : item
+          item.id === product.id
+            ? { ...exist, qty: exist.qty + 1, status: true }
+            : item
         )
       );
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
     } else {
-      setCartItems([...cartItems, { ...product, qty: 1 }]);
+      setCartItems([...cartItems, { ...product, qty: 1, status: true }]);
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }
   };
@@ -53,7 +55,7 @@ function Home() {
   }, []);
   return (
     <div className={style.mainContent}>
-      <Product onAdd={onAdd} product={product} />
+      <Product onAdd={onAdd} product={product} cartItems={cartItems} />
       <Cart
         onRemove={onRemove}
         onAdd={onAdd}
