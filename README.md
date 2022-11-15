@@ -1,7 +1,7 @@
 # G Sneaker By ThinhgiaDoan
 
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/GoldenOwlAsia/webdev-intern-assignment/blob/main/screenshots/screenshot.jpg)
+[![Product Name Screen Shot][product-screenshot]](./src/assets/screenshot.jpg)
 
 ### Built With
 
