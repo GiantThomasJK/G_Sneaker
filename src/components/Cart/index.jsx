@@ -49,6 +49,7 @@ function Cart(props) {
                           </div>
                           <div className={style.cartItem_actions}>
                             <div className={style.cartItem_count}>
+                              {/* Increase or decrease the amount */}
                               <div
                                 onClick={() => onRemove(item)}
                                 className={style.cartItem_count_button}
@@ -58,7 +59,7 @@ function Cart(props) {
                               <div className={style.cartItem_count_number}>
                                 {item.qty}
                               </div>
-
+                              {/* Increase the amount */}
                               <div
                                 onClick={() => onAdd(item)}
                                 className={style.cartItem_count_button}
@@ -66,6 +67,7 @@ function Cart(props) {
                                 +
                               </div>
                             </div>
+                            {/* Remove item from cart */}
                             <div
                               onClick={() => onDelete(item)}
                               className={style.cartItem_remove}

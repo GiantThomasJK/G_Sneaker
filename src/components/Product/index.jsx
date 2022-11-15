@@ -35,6 +35,7 @@ function Product(props) {
                         <img src={check} alt="" />
                       </div>
                     ) : (
+                      //Add item to cart
                       <div
                         onClick={() => onAdd(item)}
                         className={style.shopItem_button}
